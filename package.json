@@ -1,44 +1,60 @@
 {
   "name": "kaneo",
-  "version": "1.0.0",
-  "private": true,
+  "private": false,
   "type": "module",
-  "description": "Modern project management platform with Next.js, Supabase & Drizzle ORM",
-  "packageManager": "pnpm@10.32.1",
-  "engines": {
-    "node": ">=20.19.0",
-    "pnpm": ">=10.32.0"
-  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^15.1.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@supabase/supabase-js": "^2.49.0",
-    "@supabase/ssr": "^0.10.2",
-    "@supabase/auth-js": "^2.97.0",
-    "drizzle-orm": "^0.45.0",
-    "postgres": "^3.4.0",
-    "@paralleldrive/cuid2": "^3.3.0",
-    "clsx": "^2.1.0",
-    "tailwind-merge": "^3.0.0",
-    "lucide-react": "^0.577.0",
-    "class-variance-authority": "^0.7.0",
-    "@radix-ui/react-dialog": "^1.1.0",
-    "@radix-ui/react-slot": "^1.2.0"
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "i18n:check": "node ./scripts/i18n/check.mjs",
+    "i18n:check:fix": "node ./scripts/i18n/check.mjs --fix",
+    "i18n:report": "node ./scripts/i18n/report.mjs",
+    "i18n:report:fix": "node ./scripts/i18n/report.mjs --fix",
+    "i18n:schema": "node ./scripts/i18n/schema.mjs",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "test:integration": "pnpm --filter @kaneo/api test:integration",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@types/node": "^20.11.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.8.0",
-    "tailwindcss": "^4.2.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
+    "@biomejs/biome": "2.4.8",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "esbuild": "0.27.3",
+    "husky": "^9.1.7",
+    "linkifyjs": ">=4.3.2",
+    "tar-fs": ">=3.1.1",
+    "turbo": "^2.7.2",
+    "typescript": "5.8.3"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "@isaacs/brace-expansion": "5.0.1",
+      "@hono/node-server": "1.19.10",
+      "ajv": "8.18.0",
+      "diff": "8.0.3",
+      "esbuild": "0.27.3",
+      "express-rate-limit": "8.2.2",
+      "hono": "4.12.7",
+      "lodash": "4.18.0",
+      "markdown-it": "14.1.1",
+      "minimatch": "10.2.3",
+      "rollup": "4.59.0",
+      "seroval": "1.4.1",
+      "effect": ">=3.20.0",
+      "fast-xml-parser": ">=5.5.7",
+      "socket.io-parser": ">=4.2.6",
+      "picomatch": ">=4.0.4",
+      "path-to-regexp": ">=8.4.0",
+      "brace-expansion": ">=5.0.5",
+      "yaml": ">=2.8.3"
+    }
+  },
+  "packageManager": "pnpm@10.32.1",
+  "version": "2.6.8",
+  "dependencies": {
+    "dotenv-mono": "^1.5.1"
   }
 }
