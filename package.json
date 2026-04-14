@@ -1,5 +1,5 @@
 {
-  "name": "kaneo-nextjs",
+  "name": "kaneo",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -16,25 +16,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^15.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "@supabase/supabase-js": "^2.38.0",
-    "@supabase/ssr": "^0.0.11",
-    "drizzle-orm": "^0.30.0",
-    "postgres": "^3.3.0",
-    "@paralleldrive/cuid2": "^3.0.0",
-    "clsx": "^2.0.0",
-    "tailwind-merge": "^2.0.0",
-    "lucide-react": "^0.0.0",
-    "class-variance-authority": "^0.7.0"
+    "next": "^15.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/auth-js": "^2.97.0",
+    "drizzle-orm": "^0.45.0",
+    "postgres": "^3.4.0",
+    "@paralleldrive/cuid2": "^3.3.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^3.0.0",
+    "lucide-react": "^0.577.0",
+    "class-variance-authority": "^0.7.0",
+    "@radix-ui/react-dialog": "^1.1.0",
+    "@radix-ui/react-slot": "^1.2.0"
   },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "typescript": "^5.0.0",
-    "tailwindcss": "^3.3.0",
+    "@types/node": "^20.11.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.0",
+    "tailwindcss": "^4.2.0",
     "postcss": "^8.4.0",
     "autoprefixer": "^10.4.0"
   }
