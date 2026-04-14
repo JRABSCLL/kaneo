@@ -1,8 +1,0 @@
-packages:
-  - packages/**
-  - apps/**
-onlyBuiltDependencies:
-  - '@biomejs/biome'
-  - bcrypt
-  - better-sqlite3
-  - esbuild
